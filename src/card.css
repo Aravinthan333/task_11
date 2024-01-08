@@ -1,0 +1,77 @@
+.cards {
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  background: rgb(35, 30, 108);
+  background: linear-gradient(
+    90deg,
+    rgba(35, 30, 108, 1) 0%,
+    rgba(78, 153, 242, 1) 100%
+  );
+}
+
+.card {
+  width: 20%;
+  border: 1px solid black;
+  background: #fff;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 10px;
+  height: fit-content;
+}
+
+li {
+  align-items: start;
+}
+
+.type {
+  font-size: 13px;
+  margin-top: 30px;
+  margin-bottom: -8px;
+  color: rgb(98, 98, 98);
+}
+
+.haveAccess > img {
+  position: relative;
+  top: 10px;
+  margin-right: 5px;
+}
+
+.dontHaveAccess {
+  color: rgb(138, 135, 135);
+}
+
+.dontHaveAccess > img {
+  color: red;
+  position: relative;
+  top: 10px;
+  margin-right: 5px;
+}
+
+.button {
+  margin: 15px 0;
+  color: #fff;
+  background: rgb(65, 114, 228);
+  padding: 10px 35%;
+  border-radius: 25px;
+  border: 1px solid rgb(65, 114, 228);
+}
+
+.accessContents {
+  text-align: start;
+}
+
+@media (max-width: 500px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card > accessContents > img {
+    display: none;
+  }
+  .card > dontHaveAccess > img {
+    display: none;
+  }
+}
