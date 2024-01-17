@@ -75,7 +75,7 @@ const Card = ({ type, pay, accesses, noAccess }) => (
 );
 
 Card.propTypes = {
-  type: propTypes.string.isRequired,
+  type: propTypes.string,
   pay: propTypes.oneOfType([
     propTypes.string,
     propTypes.number,
@@ -97,9 +97,18 @@ function Cards() {
   return (
     <>
       <div className="cards">
-        <Card {...obj[0]} />
+        {/* <Card {...obj[0]} />
         <Card {...obj[1]} />
-        <Card {...obj[2]} />
+        <Card {...obj[2]} /> */}
+        {obj.map((e) => (
+          <Card
+            key={e.type}
+            type={e.type}
+            pay={e.pay}
+            accesses={e.accesses}
+            noAccess={e.noAccess}
+          />
+        ))}
       </div>
     </>
   );
